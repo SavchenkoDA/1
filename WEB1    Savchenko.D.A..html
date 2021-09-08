@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<!-- комментарий в HTML -->
+
+<!-- в первой строке мы сообщаем браузеру,
+  что это документ HTML5 -->
+
+<html lang="ru">
+    <head>
+            <title>Задание 1</title>
+    </head>
+
+    <body>
+
+               <h1>Задание 1</h1>
+        <h2 id="head1">Нумерованный список гиперссылок</h2>
+
+            <ol>
+                <li><a href="http://example.com">Абсолютная гиперссылка на главную страницу сайта example.com</a></li>
+                <li><a href="https://example.com">Абсолютная гиперссылка на главную страницу сайта example.com в протоколе https</a></li>
+                <li><a href="ftp://example.com/files/file.html">Ссылка на файл на сервере FTP без авторизации</a></li>
+                <li><a href="ftp://user:12345@example.com/files/file.html">Ссылка на файл на сервере FTP с авторизацией</a></li>
+                <li><a href="http://example.com#anchor">Ссылка на фрагмент страницы некоторого сайта</a></li>
+                <li><a href="#top">Ссылка на фрагмент текущей страницы</a></li>
+                <li><a href="http://example.com?parameter1=p1&parameter2=p2">Ссылка с двумя параметрами в URL</a></li>
+                <li>
+                    Список ссылок основной навигации сайта с подписями title
+                    <ul>
+                        <li><a href="#head1" title="Нумерованный список гиперссылок">Нумерованный список гиперссылок</a></li>
+                        <li><a href="#head2" title="Форма">Форма</a></li>
+                    </ul>
+                </li>
+                <li><a>Ссылка без href</a></li>
+                <li><a href="">Ссылка с пустым href</a></li>
+                <li><a href="http://example.com" rel="nofollow">Ссылка, по которой запрещен переход поисковикам</a></li>
+                <li><a href="http://example.com" rel="nofollow"><!--noindex-->Ссылка, запрещенная для индексации поисковиками<!--/noindex--></a></li>
+                <li><p>Контекстная <a href="http://example.com">ссылка</a> в тексте абзаца</p></li>
+                <li>
+                    Ссылка-изображение<br/>
+                    <a href="https://protorti.ru/recepty/pyanaya-vishnya-tort.html"><img src="https://arthomework.ru/upload/iblock/1ca/1ca78647e75f4c6166ad542e29fdc882.jpg" width="300" height="224" alt="Описание картинки"></a>
+                </li>
+
+                <li>
+                    Ссылки из прямоугольных и круглых областей картинки (HTML-тег map)<br/>
+                    <img src="https://arthomework.ru/upload/iblock/1ca/1ca78647e75f4c6166ad542e29fdc882.jpg" width="300" height="224" alt="Описание картинки" usemap="#mymap">
+                    <map name="mymap">
+                      <area shape="circle" coords="150,112,30" href="https://цехэтогогорода.рф/" alt="Круглая область">
+                      <area shape="rect" coords="0,224,300,0" href="https://www.youtube.com/watch?v=z0NfI2NeDHI&list=RDz0NfI2NeDHI&start_radio=1" alt="Прямоугольная область">
+                    </map>
+                </li>
+
+                <li><a href="page">Относительная ссылка на страницу в текущем каталоге</a></li>
+                <li><a href="./about/page">Относительная ссылка на страницу в каталоге about</a></li>
+                <li><a href="../page">Относительная ссылка на страницу в каталоге уровнем выше текущего</a></li>
+                <li><a href="../../page">Относительная ссылка на страницу в каталоге двумя уровнями выше</a></li>
+                <li><a href="/">Сокращенная ссылка на главную</a></li>
+                <li><a href="/pages/page">Сокращенная ссылка на внутреннюю</a></li>
+            </ol>
+
+
+            <h2 id="head2">Форма</h2>
+            <form action="http://example.com" method="POST">
+                <label>
+                    Имя:<br/>
+                    <input name="yourname">
+                </label><br/>
+                <label>
+                    e-mail:<br/>
+                    <input name="e-mail"
+                    type="email"/>
+                </label><br/>
+                <label>
+                    Дата рождения:<br/>
+                    <input name="dateofbirth"
+                    type="date"/>
+                </label><br/>
+                количество конечностей:<br/>
+                <label>
+                    <input type="radio" name="radio-group-1" value="0"/>
+                    0
+                </label>
+                <label>
+                    <input type="radio" name="radio-group-1" value="1"/>
+                    1
+                </label>
+                <label>
+                    <input type="radio" name="radio-group-1" value="2"/>
+                    2
+                </label>
+                <label>
+                    <input type="radio" name="radio-group-1" value="3"/>
+                    3
+                </label>
+                <label>
+                    <input type="radio" name="radio-group-1" value="4"/>
+                    4
+                </label>
+                <label>
+                    <input type="radio" name="radio-group-1" value="5"/>
+                    Более 4
+                </label><br/>
+
+                <label>
+                    Сверхспособности:<br/>
+                    <select name="p" multiple="multiple">
+                    <option value="s1" selected="selected">бессмертие</option>
+                    <option value="s2">прохождение сквозь стены</option>
+                    <option value="s3">левитация</option>
+                    </select>
+                </label><br/>
+                <label>
+
+                    Биография:<br/>
+                    <textarea name="s4">Расскажите о себе...</textarea>
+                </label><br/>
+                С контрактом ознакомлен(а):<br/>
+                <label>
+                    <input type="checkbox" checked="checked" name="s5"/>
+                </label><br/>
+                <input type="submit" value="Отправить"/>
+            </form>
+    </body>
+</html>
